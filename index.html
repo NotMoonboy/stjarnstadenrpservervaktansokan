@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Stjärnstaden Rp - Servervakt ansökan</title>
+    <link rel="icon" href="https://media.discordapp.net/attachments/824381280967327836/1119554779882987600/stjarnstaden_logotyp_t.png?width=701&height=701">
+
+	<link rel="stylesheet" href="./css/main.css" />
+</head>
+<body>
+	<main>
+		<section class="section-contact">
+			<div class="container">
+				<h1>Servervakt ansökan</h1>
+				<p>Att vara Servervakt innebär att man bär ett ansvar över det som händer på servern. Främsta uppgifterna
+				handlar om att avlasta staff teamet, men samtidigt som att utföra ett professionellt jobb.</p>
+				<p>Till skillnad från staffs, så finns det inga större krav på Servervakter. Förutom givetvis att, de ska endast använda 
+				sina permissions när det är korrekt samt att i och med att de bär ett ansvar över andra spelare också visa upp för andra 
+				spelare hur RP ska se ut. Det vill säga att om man inte kan reglerna själv, så ska man ej bära denna roller. Servervakter
+				har inte heller något ansvar vad som händer på servern förutom omgivningen, det vill säga det ingår inte i uppgifter att
+				gå runt och leta efter de som inte följer reglerna. Utan målet med själva rollen är att hålla kontroll om omgivningen.</p>
+				<p>Servervakter kan inte utge bans, tempbans eller varningar utan ifall detta ska ske måste bevis finnas och då utges straffet 
+				av en staff medlem. Däremot har de möjlighet att kicka ut folk. Men kicks får endast ske när det är uppenbart någon som inte följer reglerna.</p>
+
+					<form
+					method="POST" 
+					  action="https://script.google.com/macros/s/AKfycbxpQQtsluovehaEd5nyY_vqbs_807t-tf67t2xxPhtutnjBYXanbOhnkXJM_RrTiwhELQ/exec"
+>
+					<div class="form-group">
+						<label for="firstname">Vad är ditt namn i verkligheten?*</label>
+						<input 
+							type="text" 
+							name="Namn"
+							id="fname"
+							required 
+							class="form-element"
+							placeholder="Ditt svar" />
+					</div>
+					<div class="form-group">
+						<label for="lastname">Vad är ditt discord namn?*</label>
+						<input type="discord namn" name="Discord namn" id="fname" required class="form-element" placeholder="Moon_boy#3068" />
+					</div>
+                    <div class="form-group">
+						<label for="age">Hur gammal är du?*</label>
+						<input type="text" name="Ålder" id="fname" required class="form-element" placeholder="Ditt svar" />
+					</div>
+					<div class="form-group full">
+						<label for="message">Beskriv din dagliga aktivitet*</label>
+						<textarea name="Beskriv din dagliga aktivitet" id="fname" required class="form-element" placeholder="Ditt svar"></textarea>
+					</div>
+                    <div class="form-group full">
+						<label for="message">Hur länge har du varit medlem på Stjärnstaden?*</label>
+						<textarea type="text" name="Hur länge har du varit medlem på Stjärnstaden" id="fname" required class="form-element" placeholder="Ditt svar" ></textarea>
+					</div>
+                    <div class="form-group full">
+						<label for="message">Hur många gånger har du blivit bannad*</label>
+						<textarea name="Hur många gånger har du blivit bannad" id="fname" required class="form-element" placeholder="Ditt svar"></textarea>
+					</div>
+                    <div class="form-group full">
+						<label for="message">Förklara vad för uppgift en servervakt har*</label>
+						<textarea name="Förklara vad för uppgift en servervakt har" id="fname" required class="form-element" placeholder="Ditt svar"></textarea>
+					</div>
+                    <div class="form-group full">
+						<label for="message">Varför vill du bli servervakt på servern?*</label>
+						<textarea name="Varför vill du bli servervakt på servern" id="fname" required class="form-element" placeholder="Ditt svar"></textarea>
+					</div>
+					<div class="form-group full">
+						<label for="message">Berätta sammanfattat vad korruption och abuse är och hur de kan förekomma på olika sätt som servervakt*</label>
+						<textarea name="Berätta sammanfattat vad korruption och abuse är och hur de kan förekomma på olika sätt som servervakt" id="fname" required class="form-element" placeholder="Ditt svar"></textarea>
+					</div>
+					<div class="submit-group">
+						<input type="submit" value="SKICKA IN ANSÖKAN" onClick="validation(event)" onclick = "fun();" />
+					</div>
+				</form>
+				
+				<!---Scriptet--->
+				<script>
+					const scriptURL = 'https://script.google.com/macros/s/AKfycbxpQQtsluovehaEd5nyY_vqbs_807t-tf67t2xxPhtutnjBYXanbOhnkXJM_RrTiwhELQ/exec'
+					const form = document.forms['Servervakt Ansökan - Stjärnstaden RP']
+				  
+					form.addEventListener('submit', e => {
+					  e.preventDefault()
+					  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+						.then(response => console.log('Ansökning är skickad!', response))
+						.catch(error => console.error('Error!', error.message))
+					})
+	
+					function validation() {
+	  //                               big D, throws error 
+	  // var fname = document.getElementByID("fname").value;
+		 var fname = document.getElementById("fname").value;
+	  console.log(fname);
+	  if (fname == "")
+		alert("Fyll i alla svar först!");  
+	}  
+					  </script>
+					  <!---Slutet av Scriptet--->
+
+			</div>
+		</section>
+	</main>
+</body>
+</html>
